@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% block head %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    {% endblock %}
+</head>
+<body>
+    {% block body %}
+    {% for i in event_data %}
+<div class="event_container">
+    <div class="box">
+        <div class="box_head">
+            <div class="event_name_box">
+            <h1><a href="{% url 'detail' i.id %} " id="link">{{ i.event_name }}</a></h1>
+        </div>
+            <div>
+            <h2>Date: {{ i.event_date }}</h2>
+            <h2>Time: {{ i.event_time }}</h2>
+        </div>
+        </div>
+        <div class="detail">
+            <div class="img">
+                <img src="{{ i.event_image.url }}" alt="{{ i.event_name }}">
+            </div>
+            <div class="desp_box">
+                <p class="desp">{{ i.event_desp }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+    {% endblock %}
+</body>
+</html>

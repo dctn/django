@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+
+}
+
+.box{
+    background-color: rgb(242, 239, 239);
+    width: 90%;
+    height: 250px;
+    box-shadow: 20px 20px 2px 8px;
+
+}
+.event_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.box_head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.box_head h2,h1{
+    padding-right: 20px;
+    padding-left: 20px;
+    text-decoration: none;
+}
+.event_name_box{
+    display: -webkit-box;
+    width: 60%;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.detail{
+    display: flex;
+    align-items: center;
+}
+.img img{
+    width: 180px;
+    height: 180px;
+    margin-left: 5px;
+}
+.desp_box{
+    margin-left: 20px;
+    padding-right: 10px;
+    height: 80%;
+}
+
+.desp{
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 28px;
+
+}
+
+#link{
+    text-decoration: none;
+}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% block head %}
+    <link rel="stylesheet" href="{% static 'add_page.css' %}">
+    {% endblock %}
+</head>
+<body>
+    {% block body %}
+    <div class="main">
+<div class="add_container">
+    <form class="add_form" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        Event Name: {% render_field form.event_name placeholder='Event Name' class+='form' %} <br>
+        Date: {% render_field form.event_date class+='form' %} <br>
+        Time: {% render_field form.event_time class+='form' %} <br>
+        {% render_field form.event_desp placeholder="Description" class+='form_desp' %} <br>
+
+        {{ form.event_image }} <br>
+        <button type="submit" class="form_button"> save</button>
+    </form>
+</div>
+</div>
+{% endblock %}
+</body>
+</html>
