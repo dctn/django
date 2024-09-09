@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'basic.css' %}">
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1 class="logo_name">FEST TOGETHER</h1>
+        </div>
+        <div class="links">
+            <a href="{% url 'add' %}">Add FEST</a>
+            <a href="#">edit FEST</a>
+            <a href="#">delete FEST</a>
+        </div>
+    </div>
+    {% block body %}
+    {% endblock %}
+</body>
+</html>
